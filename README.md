@@ -1,3 +1,2 @@
-# basedebooks
-laithosama.github.io/basedebooks
+# laithosama.github.io/basedebooks
 For testing purpose.
