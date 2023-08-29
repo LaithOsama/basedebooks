@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <link rel="preload" as="font" href="../../../fonts/crimson-pro.woff2" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" as="font" href="../../../fonts/league-spartan-bold.woff2" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" as="font" href="../../../fonts/crimson-pro-italic.woff2" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" as="font" href="../../../fonts/fork-awesome-subset.woff2" type="font/woff2" crossorigin="anonymous" />
+  <title>Based eBooks |  - Martin Heidegger</title>
+  <link rel="icon" href="data:," />
+  <meta name="description" content="An independent, non-profit digital library, I hold it in my hands for the benefit of my Arabian Islamic nation." />
+  <link rel="stylesheet" media="screen" type="text/css" href="../../../style.css" />
+  <link href="../../../dark.css" media="screen and (prefers-color-scheme: dark)" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <nav>
+    <a href="../../../index.html">Home</a> <a href="../../../index.html#ebooks">Ebooks</a> <a href="../../../index.html#authors">Authors</a> <a href="../../../articles.html">Articles</a> <a href="../../../about-us.html">About</a>
+  </nav>
+  <main dir="rtl">
+    <div id="book-metadata">
+      <picture><source srcset="cover.avif" type="image/avif" /> <source srcset="cover.jpeg" type="image/jpeg" /> <img id="cover" src="cover.jpeg" alt="book cover" /></picture>
+      <p class=title>plato complete works john cooper</p>
+      <p class="author">Martin Heidegger</p>
+      <p class="tags"><a href="">فلسفة</a></p>
+      <p class="description"></p><a href="index.html" class="button">المُعاينة بالانكليزية</a> <a href="index-ar.html#download" class="button">تَحميل الكِتاب</a>
+    </div>
+    <article dir="rtl">
+      <h2 id="download">حَمل الكِتاب!</h2>
+      <ul>
+        <h3>الترجمة العربية</h3>
+        <li><strong><a href="martin-heidegger--ar.pdf" target="_blank">PDF</a> —</strong> لم يتَوفر بعد، <em>من المُحتمل ان نعمل عليهِ لاحقاً</em></li>
+        <li><strong><a href="martin-heidegger--ar.epub" target="_blank">EPUB</a> —</strong> لم تتوفر نسخة احترافية عالية الجودة والمعاير الجمالية من الكتاب حتى الآن. <em>من المَحتمل ان نعمل عليهِ لاحقاً</em></li>
+        <h3>الترجمة الانكليزية</h3>
+        <li><strong><a href="martin-heidegger-.pdf" target="_blank">PDF</a> —</strong> مُترجم بواسطة …</li>
+        <li><strong>EPUB —</strong> النسخة ذات معايير الجودة العالية للكتاب غير متاحة حتى الآن.</li>
+      </ul>
+
+    </article>
+    <footer>
+      <a href="../../../index.html#ebooks">Ebooks</a> • <a href="../../../index.html#authors">Authors</a> • <a href="../../../articles.html">Articles</a> • <a href="../../../about-us.html">About</a> • <a href="../../../donate.html">Donate</a> • <a href="https://github.com/LaithOsama/Based-eBooks">Source</a> • <a href="../../../rss.xml">Ebook Feeds</a>
+      <p>Based eBooks is inspired by <a href="https://standardebooks.org">Standard Ebooks</a> library.<br />
+      Most of the ebooks here is taken from Internet Archive, Library Genesis and Project Gutenberg.<br />
+      Yes, most of content here is copyrighted by someone, wanna fight Go fuck yourself bastard, enemy copyright is bullshit for me.</p>
+    </footer>
+  </main>
+</body>
+</html>

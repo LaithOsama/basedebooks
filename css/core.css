@@ -1,0 +1,696 @@
+@font-face {
+font-display:swap;
+font-family:'Fork Awesome';
+font-style:normal;
+font-weight:400;
+src:url(../fonts/fork-awesome-subset.woff2) format("woff2")
+}
+
+@font-face {
+font-display:swap;
+font-family:'KFGQPC Uthman Taha Naskh';
+font-style:normal;
+font-weight:400;
+src:url(../fonts/uthman-taha-naskh.woff) format("woff")
+}
+
+@font-face {
+font-display:swap;
+font-family:'Crimson Pro';
+font-style:normal;
+font-weight:400;
+src:url(../fonts/crimson-pro.woff2) format("woff2")
+}
+
+@font-face {
+font-display:swap;
+font-family:'Crimson Pro';
+font-style:normal;
+font-weight:700;
+src:url(../fonts/crimson-pro-bold.woff2) format("woff2")
+}
+
+@font-face {
+font-display:swap;
+font-family:'Crimson Pro';
+font-style:italic;
+font-weight:400;
+src:url(../fonts/crimson-pro-italic.woff2) format("woff2")
+}
+
+@font-face {
+font-display:swap;
+font-family:'League Spartan';
+font-style:normal;
+font-weight:700;
+src:url(../fonts/league-spartan-bold.woff2) format("woff2")
+}
+
+/* Start reset */
+h1,h2,h3,h4,h5,h6,blockquote,body,figure,html,ol,ul,ol#authors,ol#ebooks,ol#authors li p,ol#ebooks li p, p.title {
+margin:0;
+padding:0
+}
+
+blockquote {
+quotes:none
+}
+
+button::-moz-focus-inner {
+border:0
+}
+
+table {
+border-collapse:collapse;
+border-spacing:0
+}
+/* End reset */
+
+
+ol#authors,ol#ebooks {
+text-align:justify
+}
+
+ol#authors > li,ol#ebooks > li {
+display:inline-block;
+margin-bottom:3rem;
+vertical-align:top;
+width:calc(25% - 4px) 
+}
+
+#download > li span:first-child a {
+font-size:smaller;
+padding:.25rem .35rem
+}
+
+#download li {
+margin:1rem 0
+}
+
+#download li span:nth-child(2) {
+padding-left:.5rem;
+padding-right:.5rem
+}
+
+#download li,#toc,.articles > ul:first-of-type li {
+list-style:none
+}
+
+ol#ebooks > li img,ol#authors > li img,.more-ebooks img {
+transition:transform .2s ease,box-shadow .2s ease
+}
+
+ol#ebooks > li img:hover,ol#authors > li img:hover,.more-ebooks img:hover {
+box-shadow:3px 3px 1px rgba(0,0,0,0.25);
+transform:scale(1.05)
+}
+
+ol#ebooks > li p:first-of-type a,.ebook-details p.title {
+font-weight:700
+}
+
+.alert {
+background:url(../images/stripes.svg) #FF9;
+border:2px solid #FC0;
+border-radius:.25rem;
+color:#222;
+padding:2rem
+}
+
+.article[dir="ltr"] p:first-of-type::first-letter {
+float:left;
+font-size:2rem;
+margin-right:5px
+}
+
+.articles > ul:first-of-type li {
+background:rgba(0,0,0,0.1);
+border:1px solid #222;
+border-radius:.25rem;
+margin-top:.25rem;
+padding:.25rem .5rem
+}
+
+.articles > ul:first-of-type li time {
+float:left
+}
+
+.buttons a,main nav a[ref]:hover {
+transition:border-color 0.5s,background-color .5s
+}
+
+.buttons a[href="index.html#download"]:nth-of-type(2)::before,.buttons a[href="index-ar.html#download"]:nth-of-type(2)::before {
+content:"\f019"
+}
+
+.ebook-details {
+margin:0 auto;
+overflow:hidden;
+padding:1rem 0;
+width:85%
+}
+
+.ebook-details img,ol#authors > li img,ol#ebooks > li img,.ebook-details img {
+border:1px solid #222;
+border-radius:.25rem;
+height:auto;
+max-width:100%
+}
+
+.ebook-details p.author,.ebook-details p.tags,.ebook-details p.description {
+margin:.5rem 0
+}
+
+.ebook-details p.title {
+font-size:1.2rem
+}
+
+.ebook-details,div.buttons,article .tags {
+border-bottom:1px dashed #222;
+margin-bottom:1rem;
+padding-bottom:1rem
+}
+
+.more-ebooks img {
+border:1px solid #222;
+border-radius:.25rem;
+height:200px;
+width:auto
+}
+
+.more-ebooks > li {
+display:inline-block;
+margin:0rem .15rem;
+vertical-align:middle
+}
+
+.more-ebooks li:first-child img,.more-ebooks li:last-child img {
+height:160px
+}
+
+.more-ebooks li:nth-child(2) img,.more-ebooks li:nth-child(4) img {
+height:180px
+}
+
+.subtitle {
+font-weight:200
+}
+
+.tags a {
+background:rgba(0,0,0,.1);
+border:1px solid #222;
+border-radius:.25rem;
+box-shadow:1px 1px 0 rgba(255,255,255,.5) inset;
+display:inline-block;
+line-height:1;
+padding:.25rem .5rem
+}
+
+.tags a:hover {
+background-color:#4F9D85;
+color:#fff
+}
+
+a {
+color:inherit
+}
+
+a,article .tags a,#download li span:first-child a {
+text-decoration:none
+}
+
+a:hover {
+color:#4F9D85
+}
+
+article > p,article > li,article > li a {
+-webkit-hyphens:auto;
+hyphens:auto;
+text-align:justify
+}
+
+article a,footer a {
+text-decoration:underline
+}
+
+article audio,article .tags,summary,footer,footer p,nav,ol#authors > li,ol#ebooks > li,#toc li,.more-ebooks,div.buttons {
+text-align:center
+}
+
+article img {
+border:1px solid #222;
+border-radius:.25rem;
+height:auto;
+margin-bottom:2rem;
+width:100%;
+max-width:50rem;
+}
+
+article picture {
+text-align:center;
+margin:0 auto
+}
+
+
+article p,article h2,article h3,article ul,article ol,article li,article blockquote {
+margin-top:1em
+}
+
+article picture {
+font-size:0;
+margin-bottom:2rem;
+position:relative;
+text-align:center
+}
+
+article[dir="ltr"] .buttons a:before,main[dir="ltr"] .buttons a:before {
+margin-right:8px
+}
+
+article[dir="ltr"] ol,article[dir="ltr"] ul {
+padding-left:.5rem
+}
+
+article[dir="rtl"] .buttons a:before,main[dir="rtl"] .buttons a:before {
+margin-left:8px
+}
+
+article[dir="rtl"] ol {
+list-style:arabic-indic
+}
+
+article[dir="rtl"] ol,article[dir="rtl"] ul {
+padding-right:.5rem
+}
+
+article > audio {
+display:block;
+height:45px;
+width:250px
+}
+
+article p.tags a {
+margin: .25rem
+}
+
+body {
+background-color:#e9e7e0;
+color:#222;
+font:.88rem/1.6 'Crimson Pro','Times New Roman',serif;
+font-variant-numeric:oldstyle-nums
+}
+
+div.buttons a {
+margin:0 5px
+}
+
+footer > span {
+margin:0 10px
+}
+
+footer p {
+font-size:small;
+margin-top:1rem
+}
+
+h1,h2,h3,h4,h5,h6 {
+color:#333
+}
+
+h1,h2,summary {
+font-family:"League Spartan"
+}
+
+h2,summary {
+font-size:1.4rem;
+font-weight:700
+}
+
+h3 {
+text-transform:capitalize;
+word-spacing:3px
+}
+
+h3,picture[data-caption]::before,.subtitle,p.alert,p.author,p.description {
+font-style:italic
+}
+
+header nav {
+background-color:#394451;
+border-bottom:5px solid rgba(0,0,0,0.25);
+color:#fff;
+height:34px
+}
+
+header nav a {
+font-size:small;
+margin:0 5px
+}
+
+hgroup h1,hgroup h2 {
+text-align:center!important
+}
+
+hgroup h2 {
+font:italic 1.75rem/1.2 "Crimson Pro";
+margin-bottom:2rem;
+margin-top:0
+}
+
+html {
+-ms-text-size-adjust:100%;
+-webkit-text-size-adjust:100%;
+font-size:22px;
+line-height:1.4;
+margin:0;
+padding:0
+}
+
+main {
+box-sizing:border-box;
+font-variant-numeric:oldstyle-nums;
+max-width:60rem;
+margin-right:auto;
+margin-left:auto;
+width:100%
+}
+
+main > article > * {
+margin-right:auto;
+margin-left:auto;
+max-width:40rem;
+}
+
+hr, main > article > hr {
+border:none;
+border-top:3px double #777;
+margin:1.5rem 0;
+max-width:100%;
+width:100%
+}
+
+main h1 {
+font-size:2rem;
+letter-spacing:1px;
+margin:1rem auto;
+text-align:center
+}
+
+main nav {
+margin-bottom:2rem
+}
+
+main nav a.current {
+background:#4f9d85;
+border:1px solid rgba(0,0,0,.5);
+color:#fff
+}
+
+main nav a:first-child,main nav a:last-child,.buttons a,#download li span:first-child a {
+background-color:#4f9d85;
+border:1px solid #222;
+border-radius:.25rem;
+box-shadow:2px 2px 0 rgba(0,0,0,.5),1px 1px 0 rgba(255,255,255,.5) inset;
+color:#fff;
+display:inline-block;
+font-family:"League Spartan";
+line-height:1.2;
+text-shadow:1px 1px 0 rgba(0,0,0,.5)
+}
+
+main nav a:first-child,main nav a:last-child,.buttons a {
+padding:1rem 1.5rem;
+}
+
+main nav a:first-child:before {
+content:"\f060";
+margin-right:.5rem;
+position:relative;
+right:0;
+transition:all 200ms ease
+}
+
+main nav a:first-child:before,main nav a:last-child:after,.buttons a::before {
+font-family:'Fork Awesome'
+}
+
+main nav a:first-child[href]:hover::before {
+position:relative;
+right:.25rem;
+transition:all 200ms ease
+}
+
+main nav a:last-child:after {
+content:"\f061";
+left:0;
+margin-left:.5rem;
+position:relative;
+transition:all 200ms ease
+}
+
+main nav a:not(:first-child):not(:last-child) {
+border-radius:.25rem;
+font-variant-numeric:normal;
+margin:0 .5rem;
+padding:1rem;
+text-decoration:underline
+}
+
+main nav a:not([href]),.buttons a:not([href]),#download li span:first-child a:not([href]) {
+background:#bbb url(../images/stripes-dark.svg);
+box-shadow:none;
+color:#efefef;
+cursor:default
+}
+
+main nav a[href].next:hover::after,main nav a:last-child[href]:hover::after {
+left:.25rem;
+position:relative;
+transition:all 200ms ease
+}
+
+main nav a[href]:hover,.buttons a[href]:hover,#download li span:first-child a[href]:hover {
+background-color:#62BFA3;
+color:#fff;
+text-decoration:none
+}
+
+main nav.current {
+box-shadow:none;
+text-shadow:1px 1px 0 rgba(0,0,0,0.5)
+}
+
+main p:first-child,main ul:first-child,main ol:first-child,main ul li:first-child,main ol li:first-child,main blockquote:first-child {
+margin-top:0
+}
+
+main[dir="ltr"] .ebook-details img {
+float:left;
+margin-right:10px
+}
+
+main[dir="ltr"] h2,main[dir="ltr"] h3 {
+text-align:left
+}
+
+main[dir="rtl"] .buttons a,main[dir="rtl"] h1,article[dir="rtl"] h1,main[dir="rtl"] h2,article[dir="rtl"] h2 {
+font-family:'KFGQPC Uthman Taha Naskh'
+}
+
+main[dir="rtl"] .ebook-details img {
+float:right;
+margin-left:10px
+}
+
+main[dir="rtl"] h2,main[dir="rtl"] h3 {
+text-align:right
+}
+
+main[dir="rtl"] p.description,main[dir="rtl"] p.author,main[dir="rtl"] .subtitle,main[dir="rtl"] h3 {
+font-style:normal
+}
+
+main[dir="rtl"],article[dir="rtl"] {
+direction:rtl;
+font-family:'KFGQPC Uthman Taha Naskh','Crimson Pro','Times New Roman'
+}
+
+@media (max-width: 900px) {
+
+.ebook-details {
+	width: 95%
+}
+
+ol#authors > li,ol#ebooks > li {
+margin:2rem .2rem;
+width:31.5%
+}
+
+article {
+padding:0 2rem
+}
+footer {
+padding: 1rem 3rem
+}
+
+@media (max-width: 700px) {
+ol#authors > li img,ol#ebooks > li img,.ebook-details img {
+margin-bottom:10px
+}
+
+#download li span:nth-child(2) {
+display:none
+}
+
+#download li span:nth-child(3) {
+display:block;
+margin-left:2rem;
+padding-top:.5rem
+}
+
+.buttons a {
+padding:.5rem .75rem
+}
+
+.ebook-details img {
+height:220px;
+margin-bottom:10px;
+width:160px
+}
+
+.more-ebooks img {
+height:180px
+}
+
+.more-ebooks li {
+margin:0
+}
+
+.more-ebooks li:first-child img,.more-ebooks li:last-child img {
+height:140px
+}
+
+.more-ebooks li:nth-child(2) img,.more-ebooks li:nth-child(4) img {
+height:160px
+}
+
+h1 {
+font-size:1.5rem!important
+}
+
+h2 {
+font-size:1.1rem!important
+}
+
+h3 {
+font-size:.9rem
+}
+
+main[dir="ltr"] p.description {
+clear:left
+}
+
+main[dir="rtl"] p.description {
+clear:right
+}
+}
+
+@media only screen and (max-width: 540px) {
+ol#authors li,ol#ebooks li {
+margin:0 4px;
+margin-bottom:2rem;
+width:47%
+}
+
+.articles ul:first-of-type li {
+font-size:small
+}
+
+.buttons a[href="index.html#download"],.buttons a[href="index-ar.html#download"],main nav a:first-child,main nav a:last-child,main nav > a:first-child::before,in nav a:last-child {
+font-size:0
+}
+
+.ebook-details p.author,.ebook-details p.description {
+font-size:smaller
+}
+
+.ebook-details p.tags a {
+font-size:small;
+margin:0;
+padding:.25rem .35rem
+}
+
+.ebook-details p.title {
+font-size:1rem;
+line-height:1.2
+}
+
+.more-ebooks li {
+margin:1rem .25rem;
+width:15%
+}
+
+.more-ebooks li img {
+height:auto!important;
+width:100%
+}
+
+main nav > a:first-child::before,main nav > a:last-child::after,.buttons a[href="index.html#download"]::before,.buttons a[href="index-ar.html#download"]::before {
+font-size:.88rem;
+margin:0!important
+}
+
+main nav a:first-child,main nav a:last-child {
+padding:1rem
+}
+
+main nav span,main nav a:not(:first-child):not(:last-child):not(.current),footer span:nth-of-type(4) {
+display:none
+}
+}
+
+@media only screen and (max-width: 480px) {
+.more-ebooks li {
+margin:.25rem;
+width:35%
+}
+
+footer span:nth-of-type(3) {
+display:none
+}
+
+footer span:nth-of-type(4) {
+display:inline
+}
+}
+
+@media only screen and (max-width: 380px) {
+.articles ul:first-of-type li time {
+display:block;
+float:none
+}
+
+footer span:nth-of-type(3) {
+display:inline
+}
+
+footer span:nth-of-type(4),footer span:nth-of-type(2) {
+display:none
+}
+}
+
+@media only screen and (max-width: 320px) {
+ol#authors > li img,ol#ebooks > li img {
+height:335px;
+width:224px
+}
+
+ol#authors > li,ol#ebooks > li {
+margin:1rem 0;
+width:100%
+}
+
+footer span:nth-of-type(4) {
+display:none
+}
+}

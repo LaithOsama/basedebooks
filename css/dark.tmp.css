@@ -1,0 +1,64 @@
+body {
+  color: #fff;
+  background-color: #2c3035;
+}
+
+h1, h2, h3, h4 {
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .75);
+}
+h1, h2, footer{
+    border-color: #aaa;
+}
+.articles > ul:first-of-type li ,#authors li img,#ebooks li img,.ebook-details img,#download li a:first-of-type,.buttons a,.tags a,.more-ebooks img, article img, pre{border-color:#000}
+
+a:hover {
+  color:#62bfa3
+}
+
+article audio {
+filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%)
+}
+
+.button:hover {
+color:#fff;
+background:#62bfa3;
+}
+
+
+ main nav a:not(:first-child):not(:last-child) {
+    color:#fff;
+    }
+
+.ebook-details,
+main .buttons, 
+article .tags {
+border-color:#aaa;
+}
+
+pre,
+input[type="text"],
+.articles > ul:first-of-type li {
+  background-color: #1c1c1c;
+}
+
+.tags > a {
+  border: 1px solid #fff;
+  color:#fff;
+  box-shadow: 1px 1px 0px rgba(255, 255, 255, .5) inset;
+}
+
+.tags > a:hover {
+  background-color:#62bfa3;
+  color:#fff
+}
+
+pre,
+input[type="text"],
+#authors > li img,
+#ebooks > li img,
+.articles > ul:first-of-type li {
+  border: #000 solid 1px;
+}
+
+h1,h2,h3 {color:#fff}
+
