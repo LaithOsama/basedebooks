@@ -227,7 +227,7 @@ a:hover {
 color:#4F9D85
 }
 
-article > p,article > li,article > li a {
+article p,article li {
 -webkit-hyphens:auto;
 hyphens:auto;
 text-align:justify
