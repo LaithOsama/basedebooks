@@ -139,7 +139,7 @@ padding:.25rem .5rem
 float:left
 }
 
-.buttons a,main nav a[ref]:hover {
+button,.buttons a,main nav a[ref] {
 transition:border-color 0.5s,background-color .5s
 }
 
@@ -250,22 +250,45 @@ width:100%;
 max-width:50rem;
 }
 
-article picture {
-text-align:center;
-margin:0 auto
+picture{
+	position: relative;
+	width: auto;
 }
 
+picture[data-caption]:hover::before{
+	opacity: 1;
+	transition: none;
+}
+
+picture[data-caption]::before {
+    transition: all .25s;
+    opacity: 0;
+    position: absolute;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    content: attr(data-caption);
+    display: block;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    text-shadow: 1px 1px 0 solid #222;
+    font-size: .6rem;
+    padding: 0.25rem 0.5rem;
+    font-style: italic;
+    border-radius: 0.25rem;
+}
 
 article p,article h2,article h3,article ul,article ol,article li,article blockquote {
 margin-top:1em
 }
 
-article picture {
+article img {
 font-size:0;
 margin-bottom:2rem;
 position:relative;
+max-width:none;
 text-align:center
 }
+
 
 article[dir="ltr"] .buttons a:before,main[dir="ltr"] .buttons a:before {
 margin-right:8px
@@ -393,7 +416,7 @@ max-width:100%;
 width:100%
 }
 
-main h1 {
+h1 {
 font-size:2rem;
 letter-spacing:1px;
 margin:1rem auto;
@@ -410,7 +433,7 @@ border:1px solid rgba(0,0,0,.5);
 color:#fff
 }
 
-main nav a:first-child,main nav a:last-child,.buttons a,#download li span:first-child a {
+button,main nav a:first-child,main nav a:last-child,.buttons a,#download li span:first-child a {
 background-color:#4f9d85;
 border:1px solid #222;
 border-radius:.25rem;
@@ -422,7 +445,7 @@ line-height:1.2;
 text-shadow:1px 1px 0 rgba(0,0,0,.5)
 }
 
-main nav a:first-child,main nav a:last-child,.buttons a {
+button,main nav a:first-child,main nav a:last-child,.buttons a {
 padding:1rem 1.5rem;
 }
 
@@ -519,6 +542,96 @@ direction:rtl;
 font-family:'KFGQPC Uthman Taha Naskh','Crimson Pro','Times New Roman'
 }
 
+form {
+  max-width: 50rem; 
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+form label {
+  display: block;
+  margin-top: .5rem;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 1rem;
+  font: 0.88rem/1.4 "Crimson Pro", sans-serif;
+  border: 1px solid #777;
+  border-radius: .25rem; 
+  background: #0000000D;
+  color: #222;
+  appearance: none;
+}
+
+form select {
+  padding-right: 2rem;
+}
+
+label.select::after, 
+label.search::before {
+  font-family: "Fork Awesome";
+  position: absolute;
+  top: 50%;
+  color: #777;
+}
+
+label.select::after {
+  content: "\f107";
+  right: 1rem;
+  transition: color .5s; 
+}
+
+label.search::before {
+  content: "\f002";
+  left: 1rem;
+  text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+}
+
+label.search input {
+  padding-left: 2rem;
+}
+
+form select {
+  display: block;
+}
+
+label.select {
+  position: relative;
+  max-width: 100%;
+}
+
+label.search {
+  position: relative;
+}
+
+form .tags, 
+form .sort,
+form .view,
+form .per-page {
+  float: left;
+  margin-right: 1rem;
+}
+
+form .tags {
+  width: 11rem; 
+}
+
+form .search {
+  margin-left: 12rem;
+}
+
+form button {
+  margin-top: 1.8rem;
+  font: 700 1rem/1.2 "League Spartan"
+}
+
+form[action="/ebooks"] select[multiple] option[value="all"] {
+  border-bottom: 1px dashed #777;
+}
+
+
 @media (max-width: 900px) {
 
 .ebook-details {
@@ -538,6 +651,16 @@ padding: 1rem 3rem
 }
 
 @media (max-width: 700px) {
+button,
+form .search,
+form .tags,
+form .sort, 
+form .view,
+form .per-page {
+  float:left;
+  margin:.5rem 1rem;
+}
+
 ol#authors > li img,ol#ebooks > li img,.ebook-details img {
 margin-bottom:10px
 }
@@ -575,18 +698,6 @@ height:140px
 
 .more-ebooks li:nth-child(2) img,.more-ebooks li:nth-child(4) img {
 height:160px
-}
-
-h1 {
-font-size:1.5rem!important
-}
-
-h2 {
-font-size:1.1rem!important
-}
-
-h3 {
-font-size:.9rem
 }
 
 main[dir="ltr"] p.description {

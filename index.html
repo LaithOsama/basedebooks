@@ -22,6 +22,73 @@
   <main>
     <h1>Browse eBooks</h1>
     <hr />
+    <form action="/ebooks" method="get" rel="search">
+      <label class="tags">Subjects <select multiple="multiple" name="tags[]" size="1">
+        <option value="all">
+          All
+        </option>
+        <option value="biography">
+          Biography
+        </option>
+        <option value="fiction">
+          Fiction
+        </option>
+        <option value="history">
+          History
+        </option>
+        <option value="metaphysics">
+          Metaphysics
+        </option>
+        <option value="nonfiction">
+          Nonfiction
+        </option>
+        <option value="philosophy">
+          Philosophy
+        </option>
+        <option value="poetry">
+          Poetry
+        </option>
+        <option value="politics">
+          Politics
+        </option>
+        <option value="political-philosophy">
+          Political-philosophy
+        </option>
+        <option value="spirituality">
+          Spirituality
+        </option>
+      </select></label> <label class="search">Keywords <input type="search" name="query" value="" /></label> <label class="select sort"><span>Sort</span> <span><select name="sort">
+        <option value="newest">
+          Release date (new → old)
+        </option>
+        <option value="author-alpha">
+          Author name (a → z)
+        </option>
+        <option value="reading-ease">
+          Reading ease (easy → hard)
+        </option>
+        <option value="length">
+          Length (short → long)
+        </option>
+      </select></span></label> <label class="select view"><span>View</span> <span><select name="view">
+        <option value="grid">
+          Grid
+        </option>
+        <option value="list">
+          List
+        </option>
+      </select></span></label> <label class="select per-page"><span>Per page</span> <span><select name="per-page">
+        <option value="12" selected="selected">
+          12
+        </option>
+        <option value="24">
+          24
+        </option>
+        <option value="48">
+          48
+        </option>
+      </select></span></label> <button>filter</button>
+    </form>
     <ol id="ebooks">
       <li>
         <a href="books/aristotle/the-complete-works-of-aristotle/index.html" tabindex="-1" property="schema:url"><picture><source srcset="books/aristotle/the-complete-works-of-aristotle/cover.avif" type="image/avif" /> <source srcset="books/aristotle/the-complete-works-of-aristotle/cover.jpeg" type="image/jpg" /> <img src="books/aristotle/the-complete-works-of-aristotle/cover.jpeg" alt=" book's cover" property="schema:image" height="335" width="224" /></picture></a>
