@@ -166,7 +166,7 @@ margin:.5rem 0
 }
 
 .ebook-details p.title {
-font-size:1.2rem
+font-size:1rem
 }
 
 .ebook-details,div.buttons,article .tags {
@@ -196,7 +196,7 @@ height:160px
 height:180px
 }
 
-.subtitle {
+span.subtitle {
 font-weight:200
 }
 
@@ -736,7 +736,7 @@ padding:.25rem .35rem
 
 .ebook-details p.title {
 font-size:1rem;
-line-height:1.2
+line-height:1
 }
 
 .more-ebooks li {
@@ -778,6 +778,13 @@ display:none
 
 footer span:nth-of-type(4) {
 display:inline
+}
+
+article h1 {
+font-size:1.5rem
+}
+article h2 {
+font-size:1.25rem
 }
 }
 
