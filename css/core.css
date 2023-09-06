@@ -211,7 +211,7 @@ padding:.25rem .5rem
 }
 
 .ebook-details .tags a:not(:first-child):not(:last-child) {
-margin: .25rem
+margin: 0 .25rem
 }
 
 .ebook-details .tags a:hover {
@@ -842,6 +842,9 @@ font-size:1.25rem
 }
 
 @media only screen and (max-width: 380px) {
+.ebook-details .tags a:not(:first-child):not(:last-child) {
+margin: .25rem
+}
 .articles ul:first-of-type li time {
 display:block;
 float:none
