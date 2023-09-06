@@ -842,9 +842,15 @@ font-size:1.25rem
 }
 
 @media only screen and (max-width: 380px) {
-.ebook-details .tags a:not(:first-child):not(:last-child) {
-margin: .25rem
+main[dir="ltr"] .ebook-details .tags a:not(:first-child):not(:last-child) {
+margin: .25rem;
+margin-left:0
 }
+main[dir="rtl"] .ebook-details .tags a:not(:first-child):not(:last-child) {
+margin: .25rem;
+margin-right:0
+}
+
 .articles ul:first-of-type li time {
 display:block;
 float:none
