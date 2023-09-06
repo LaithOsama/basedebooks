@@ -301,18 +301,15 @@ border:1px solid #222;
 border-radius:.25rem;
 height:auto;
 margin-bottom:2rem;
-width:100%;
-max-width:50rem;
+max-width:100%;
 }
 
 picture{
 	position: relative;
-	width: auto;
 }
 
 picture[data-caption]:hover::before{
 	opacity: 1;
-	transition: none;
 }
 
 picture[data-caption]::before {
@@ -320,12 +317,10 @@ picture[data-caption]::before {
     opacity: 0;
     position: absolute;
     right: 0.25rem;
-    bottom: 0.25rem;
+    bottom: 2.5rem;
     content: attr(data-caption);
-    display: block;
     background: rgba(0, 0, 0, .5);
     color: #fff;
-    text-shadow: 1px 1px 0 solid #222;
     font-size: .6rem;
     padding: 0.25rem 0.5rem;
     font-style: italic;
@@ -336,12 +331,9 @@ article p,article h2,article h3,article ul,article ol,article li,article blockqu
 margin-top:1em
 }
 
-article img {
+article picture {
 font-size:0;
 margin-bottom:2rem;
-position:relative;
-max-width:none;
-text-align:center
 }
 
 
@@ -770,6 +762,12 @@ margin:0 4px;
 margin-bottom:2rem;
 width:47%
 }
+
+picture[data-caption]::before {
+	right:1rem;
+	left:1rem
+}
+
 
 .articles ul:first-of-type li {
 font-size:small
