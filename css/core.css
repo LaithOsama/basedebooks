@@ -210,10 +210,6 @@ line-height:1;
 padding:.25rem .5rem
 }
 
-.ebook-details .tags a:not(:first-child):not(:last-child) {
-margin: 0 .25rem
-}
-
 .ebook-details .tags a:hover {
 background-color:#4F9D85;
 color:#fff
@@ -768,7 +764,6 @@ picture[data-caption]::before {
 	left:1rem
 }
 
-
 .articles ul:first-of-type li {
 font-size:small
 }
@@ -842,15 +837,6 @@ font-size:1.25rem
 }
 
 @media only screen and (max-width: 380px) {
-main[dir="ltr"] .ebook-details .tags a:not(:first-child):not(:last-child) {
-margin: .25rem;
-margin-left:0
-}
-main[dir="rtl"] .ebook-details .tags a:not(:first-child):not(:last-child) {
-margin: .25rem;
-margin-right:0
-}
-
 .articles ul:first-of-type li time {
 display:block;
 float:none
