@@ -101,7 +101,7 @@ list-style:none
 }
 
 ol#ebooks > li img,ol#authors > li img,.more-ebooks img {
-transition:transform .2s ease,box-shadow .2s ease
+transition:transform[action="/ebooks"] label.2s ease,box-shadow .2s ease
 }
 
 ol#ebooks > li img:hover,ol#authors > li img:hover,.more-ebooks img:hover {
@@ -223,16 +223,6 @@ color:inherit
 
 a:focus {
 outline: 1px dashed #777
-}
-
-main nav .current,
-main nav a[rel],
-.buttons a,
-button,
-input[type="text"],
-input[type="search"],
-select {
-	transition: border-color .5s, background-color .5s;
 }
 
 a.button:hover,
@@ -585,96 +575,110 @@ direction:rtl;
 font-family:'KFGQPC Uthman Taha Naskh','Crimson Pro','Times New Roman'
 }
 
-form {
-  max-width: 50rem; 
-  margin: 2rem auto;
+main nav .current, main nav a[rel], .buttons a, button, input[type="text"], input[type="search"], select {
+    transition: border-color .5s, background-color .5s;
+}
+
+form[action="/ebooks"] {
+  max-width: calc(100% - 2rem);
+  margin: 0 auto 4rem;  
   overflow: hidden;
 }
 
-form label {
+form[action="/ebooks"] label {
   display: block;
-  margin-top: .5rem;
+  margin-top: .5rem;  
 }
 
-form input,
-form select {
+form[action="/ebooks"] select,
+form[action="/ebooks"] input[type="text"], 
+form[action="/ebooks"] input[type="search"] {
   width: 100%;
   padding: 1rem;
   font: 0.88rem/1.4 "Crimson Pro", sans-serif;
   border: 1px solid #777;
-  border-radius: .25rem; 
+  border-radius: .25rem;
   background: #0000000D;
   color: #222;
-  appearance: none;
+  appearance: none; 
 }
 
-form select {
-  padding-right: 2rem;
+form[action="/ebooks"] select {
+  padding-right: 2rem; 
+  display:block
 }
 
-label.select::after, 
-label.search::before {
+form[action="/ebooks"] label.select::after,
+form[action="/ebooks"] label.search::before {
   font-family: "Fork Awesome";
   position: absolute;
   top: 50%;
   color: #777;
 }
 
-label.select::after {
-  content: "\f107";
+form[action="/ebooks"] label.select::after {
   right: 1rem;
-  transition: color .5s; 
+  content: "\f107";
+  transition: color .5s;
 }
 
-label.search::before {
+form[action="/ebooks"] label.search::before {
+  left: 1rem; 
   content: "\f002";
-  left: 1rem;
   text-shadow: 1px 1px 0 rgba(255,255,255,.5);
 }
 
-label.search input {
-  padding-left: 2rem;
+form[action="/ebooks"] label.search input {
+  padding-left: 2.5rem; 
 }
 
-form select {
-  display: block;
-}
-
-label.select {
-  position: relative;
-  max-width: 100%;
-}
-
-label.search {
+form[action="/ebooks"] label.search, 
+form[action="/ebooks"] label.select {
   position: relative;
 }
 
-form .tags, 
-form .sort,
-form .view,
-form .per-page {
+form button,
+form[action="/ebooks"] label.tags,
+form[action="/ebooks"] label.sort,
+form[action="/ebooks"] label.view,
+form[action="/ebooks"] label.per-page {
   float: left;
-  margin-right: 1rem;
+  margin-right: 1.5rem;  
 }
 
-form .tags {
-  width: 11rem; 
+form[action="/ebooks"] label.tags select {
+  height:8.5rem
 }
 
-form .search {
-  margin-left: 12rem;
+form[action="/ebooks"] label.search {
+  margin-left: 13rem;
 }
 
-form button {
+form[action="/ebooks"] button {
   margin-top: 1.8rem;
-  font: 700 1rem/1.2 "League Spartan"
+  font: 700 1rem/1.2 "League Spartan";
 }
 
 form[action="/ebooks"] select[multiple] option[value="all"] {
-  border-bottom: 1px dashed #777;
+  border-bottom: 1px dashed #777; 
 }
 
+@media (hover: none) and (pointer: coarse){ 
 
+  form[action="/ebooks"] label.search {
+    clear: both; 
+  }
+
+  /* Unset height for touch devices */
+  form[action="/ebooks"] select[multiple] {
+    height: auto !important;  
+  }
+
+  /* Hide "all" button on touch devices */
+  form[action="/ebooks"] select[multiple] option[value="all"] {
+    display: none;
+  }
+}
 @media (max-width: 900px) {
 
 .ebook-details {
@@ -695,11 +699,11 @@ padding: 1rem 3rem
 
 @media (max-width: 700px) {
 button,
-form .search,
-form .tags,
-form .sort, 
-form .view,
-form .per-page {
+form[action="/ebooks"] label.search,
+form[action="/ebooks"] label.tags,
+form[action="/ebooks"] label.sort, 
+form[action="/ebooks"] label.view,
+form[action="/ebooks"] label.per-page {
   float:left;
   margin:.5rem 1rem;
 }
