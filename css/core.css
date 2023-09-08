@@ -101,7 +101,7 @@ list-style:none
 }
 
 ol#ebooks > li img,ol#authors > li img,.more-ebooks img {
-transition:transform[action="/ebooks"] label.2s ease,box-shadow .2s ease
+transition:transform .2s ease,box-shadow .2s ease
 }
 
 ol#ebooks > li img:hover,ol#authors > li img:hover,.more-ebooks img:hover {
@@ -575,10 +575,6 @@ direction:rtl;
 font-family:'KFGQPC Uthman Taha Naskh','Crimson Pro','Times New Roman'
 }
 
-main nav .current, main nav a[rel], .buttons a, button, input[type="text"], input[type="search"], select {
-    transition: border-color .5s, background-color .5s;
-}
-
 form[action="/ebooks"] {
   max-width: calc(100% - 2rem);
   margin: 0 auto 4rem;  
@@ -637,13 +633,12 @@ form[action="/ebooks"] label.select {
   position: relative;
 }
 
-form button,
 form[action="/ebooks"] label.tags,
 form[action="/ebooks"] label.sort,
 form[action="/ebooks"] label.view,
 form[action="/ebooks"] label.per-page {
   float: left;
-  margin-right: 1.5rem;  
+  margin-right: 1rem;  
 }
 
 form[action="/ebooks"] label.tags select {
@@ -651,7 +646,7 @@ form[action="/ebooks"] label.tags select {
 }
 
 form[action="/ebooks"] label.search {
-  margin-left: 13rem;
+  margin-left: 9.5rem;
 }
 
 form[action="/ebooks"] button {
@@ -661,6 +656,16 @@ form[action="/ebooks"] button {
 
 form[action="/ebooks"] select[multiple] option[value="all"] {
   border-bottom: 1px dashed #777; 
+}
+
+main nav .current,
+main nav a[rel],
+.buttons a,
+button,
+form[action="/ebooks"] input[type="text"],
+form[action="/ebooks"] input[type="search"],
+form[action="/ebooks"] select {
+    transition: border-color .5s, background-color .5s;
 }
 
 @media (hover: none) and (pointer: coarse){ 
@@ -680,6 +685,11 @@ form[action="/ebooks"] select[multiple] option[value="all"] {
   }
 }
 @media (max-width: 900px) {
+
+  form[action="/ebooks"] select[multiple] {
+      height: auto !important;
+        }
+
 
 .ebook-details {
 width: 95%
@@ -830,13 +840,6 @@ display:none
 
 footer span:nth-of-type(4) {
 display:inline
-}
-
-article h1 {
-font-size:1.5rem
-}
-article h2 {
-font-size:1.25rem
 }
 }
 
