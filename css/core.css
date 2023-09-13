@@ -46,41 +46,6 @@ font-weight:700;
 src:url(../fonts/league-spartan-bold.woff2) format("woff2")
 }
 
-/* Start reset */
-h1,h2,h3,h4,h5,h6,blockquote,body,figure,html,ol,ul,ol#authors,ol#ebooks,ol#authors li p,ol#ebooks li p, p.title {
-margin:0;
-padding:0
-}
-
-a{
-	outline: 0;
-}
-
-blockquote {
-quotes:none
-}
-
-button::-moz-focus-inner {
-border:0
-}
-
-table {
-border-collapse:collapse;
-border-spacing:0
-}
-/* End reset */
-
-ol#authors,ol#ebooks {
-text-align:justify
-}
-
-ol#authors > li,ol#ebooks > li {
-display:inline-block;
-margin-bottom:3rem;
-vertical-align:top;
-width:calc(25% - 4px) 
-}
-
 #download > li span:first-child a {
 font-size:smaller;
 padding:.25rem .35rem
@@ -99,19 +64,6 @@ padding-right:.5rem
 list-style:none
 }
 
-ol#ebooks > li img,ol#authors > li img,.more-ebooks img {
-transition:transform .2s ease,box-shadow .2s ease
-}
-
-ol#ebooks > li img:hover,ol#authors > li img:hover,.more-ebooks img:hover {
-box-shadow:3px 3px 1px rgba(0,0,0,0.25);
-transform:scale(1.05)
-}
-
-ol#ebooks > li p:first-of-type a,.ebook-details p.title {
-font-weight:700
-}
-
 .alert {
 background:url(../images/stripes.svg) #FF9;
 border:2px solid #FC0;
@@ -120,14 +72,14 @@ color:#222;
 padding:2rem
 }
 
-.articles {
-width:90%
-}
-
 .article[dir="ltr"] p:first-of-type::first-letter {
 float:left;
 font-size:2rem;
 margin-right:5px
+}
+
+.articles {
+width:90%
 }
 
 .articles > ul:first-of-type li {
@@ -153,6 +105,21 @@ overflow:hidden;
 width:calc(100% - 2rem)
 }
 
+.ebook-details .tags a {
+background:rgba(0,0,0,.1);
+border:1px solid #222;
+border-radius:.25rem;
+box-shadow:1px 1px 0 rgba(255,255,255,.5) inset;
+display:inline-block;
+line-height:1;
+padding:.25rem .5rem
+}
+
+.ebook-details .tags a:hover {
+background-color:#4F9D85;
+color:#fff
+}
+
 .ebook-details img,ol#authors > li img,ol#ebooks > li img,.ebook-details img {
 border:1px solid #222;
 border-radius:.25rem;
@@ -174,17 +141,17 @@ margin-bottom:1rem;
 padding-bottom:1rem
 }
 
+.more-ebooks > li {
+display:inline-block;
+margin:0 .15rem;
+vertical-align:middle
+}
+
 .more-ebooks img {
 border:1px solid #222;
 border-radius:.25rem;
 height:200px;
 width:auto
-}
-
-.more-ebooks > li {
-display:inline-block;
-margin:0rem .15rem;
-vertical-align:middle
 }
 
 .more-ebooks li:first-child img,.more-ebooks li:last-child img {
@@ -195,82 +162,34 @@ height:160px
 height:180px
 }
 
-span.subtitle {
-font-weight:200
+a {
+outline:0
 }
 
-.ebook-details .tags a {
-background:rgba(0,0,0,.1);
-border:1px solid #222;
-border-radius:.25rem;
-box-shadow:1px 1px 0 rgba(255,255,255,.5) inset;
-display:inline-block;
-line-height:1;
-padding:.25rem .5rem
-}
-
-.ebook-details .tags a:hover {
-background-color:#4F9D85;
-color:#fff
-}
-
-a,
-a:link,
-a:visited {
+a,a:link,a:visited {
 color:inherit
-}
-
-a:focus {
-outline: 1px dashed #777
-}
-
-a.button:hover,
-main nav .current:hover,
-nav a[rel]:hover,
-button:hover{
-	transition: none;
-}
-
-input[type="text"]:focus,
-input[type="text"]:hover,
-input[type="search"]:focus,
-input[type="search"]:hover,
-select:focus,
-select:hover{
-	background: rgba(0, 0, 0, .1);
-	transition: none;
-}
-
-select[multiple] option:checked{
-	/* We have to use this method to set the bg color because browsers override background-color with !important */
-	background-image: linear-gradient(0deg, #4f9d85 0%,   #4f9d85 100%);
-}
-
-main nav .current:focus,
-a.button:focus,
-input[type="email"]:focus,
-input[type="text"]:focus,
-input[type="month"]:focus,
-input[type="search"]:focus,
-label.checkbox:focus-within,
-select:focus,
-button:focus,
-nav a[rel]:focus{
-	outline: 1px dashed;
 }
 
 a,article .tags a,#download li span:first-child a {
 text-decoration:none
 }
 
+a.button:hover,main nav .current:hover,nav a[rel]:hover,button:hover {
+transition:none
+}
+
+a:focus {
+outline:1px dashed #777
+}
+
 a:hover {
 color:#4F9D85
 }
 
-article p,article li {
--webkit-hyphens:auto;
-hyphens:auto;
-text-align:justify
+article > audio {
+display:block;
+height:45px;
+width:250px
 }
 
 article a,footer a {
@@ -286,41 +205,27 @@ border:1px solid #222;
 border-radius:.25rem;
 height:auto;
 margin-bottom:2rem;
-max-width:100%;
-}
-
-picture{
-	position: relative;
-}
-
-picture[data-caption]:hover::before{
-	opacity: 1;
-}
-
-picture[data-caption]::before {
-    transition: all .25s;
-    opacity: 0;
-    position: absolute;
-    right: 0.25rem;
-    bottom: 2.5rem;
-    content: attr(data-caption);
-    background: rgba(0, 0, 0, .5);
-    color: #fff;
-    font-size: .6rem;
-    padding: 0.25rem 0.5rem;
-    font-style: italic;
-    border-radius: 0.25rem;
+max-width:100%
 }
 
 article p,article h2,article h3,article ul,article ol,article li,article blockquote {
 margin-top:1em
 }
 
-article picture {
-font-size:0;
-margin-bottom:2rem;
+article p,article li {
+-webkit-hyphens:auto;
+hyphens:auto;
+text-align:justify
 }
 
+article p.tags a,div.buttons a {
+margin:.25rem
+}
+
+article picture {
+font-size:0;
+margin-bottom:2rem
+}
 
 article[dir="ltr"] .buttons a:before,main[dir="ltr"] .buttons a:before {
 margin-right:8px
@@ -342,14 +247,8 @@ article[dir="rtl"] ol,article[dir="rtl"] ul {
 padding-right:.5rem
 }
 
-article > audio {
-display:block;
-height:45px;
-width:250px
-}
-
-article p.tags a {
-margin: .25rem
+blockquote {
+quotes:none
 }
 
 body {
@@ -359,8 +258,24 @@ font:.88rem/1.6 'Crimson Pro','Times New Roman',serif;
 font-variant-numeric:oldstyle-nums
 }
 
-div.buttons a {
-margin:.25rem
+button,main nav a:first-child,main nav a:last-child,.buttons a {
+padding:1rem 1.5rem
+}
+
+button,main nav a:first-child,main nav a:last-child,.buttons a,#download li span:first-child a {
+background-color:#4f9d85;
+border:1px solid #222;
+border-radius:.25rem;
+box-shadow:2px 2px 0 rgba(0,0,0,.5),1px 1px 0 rgba(255,255,255,.5) inset;
+color:#fff;
+display:inline-block;
+font-family:"League Spartan";
+line-height:1.2;
+text-shadow:1px 1px 0 rgba(0,0,0,.5)
+}
+
+button::-moz-focus-inner {
+border:0
 }
 
 footer > span {
@@ -372,8 +287,92 @@ font-size:small;
 margin-top:1rem
 }
 
+form[action="/ebooks"] {
+margin:0 auto 4rem;
+max-width:calc(100% - 2rem);
+overflow:hidden
+}
+
+form[action="/ebooks"] button {
+font:700 1rem/1.2 "League Spartan";
+margin-top:1.8rem
+}
+
+form[action="/ebooks"] label {
+display:block;
+margin-top:.5rem
+}
+
+form[action="/ebooks"] label.search {
+margin-left:9.5rem
+}
+
+form[action="/ebooks"] label.search input {
+padding-left:2.5rem
+}
+
+form[action="/ebooks"] label.search::before {
+content:"\f002";
+left:1rem;
+text-shadow:1px 1px 0 rgba(255,255,255,.5)
+}
+
+form[action="/ebooks"] label.select::after {
+content:"\f107";
+right:1rem;
+transition:color .5s
+}
+
+form[action="/ebooks"] label.select::after,form[action="/ebooks"] label.search::before {
+color:#777;
+font-family:"Fork Awesome";
+position:absolute;
+top:50%
+}
+
+form[action="/ebooks"] label.tags select {
+height:8.5rem
+}
+
+form[action="/ebooks"] label.tags,form[action="/ebooks"] label.sort,form[action="/ebooks"] label.view,form[action="/ebooks"] label.per-page {
+float:left;
+margin-right:1rem
+}
+
+form[action="/ebooks"] select {
+display:block;
+padding-right:2rem
+}
+
+form[action="/ebooks"] select,form[action="/ebooks"] input[type="text"],form[action="/ebooks"] input[type="search"] {
+appearance:none;
+background:#0000000D;
+border:1px solid #777;
+border-radius:.25rem;
+color:#222;
+font:.88rem/1.4 "Crimson Pro",sans-serif;
+padding:1rem;
+width:100%
+}
+
+form[action="/ebooks"] select[multiple] option[value="all"] {
+border-bottom:1px dashed #777
+}
+
+h1 {
+font-size:2rem;
+letter-spacing:1px;
+margin:1rem auto;
+text-align:center
+}
+
 h1,h2,h3,h4,h5,h6 {
 color:#333
+}
+
+h1,h2,h3,h4,h5,h6,blockquote,body,figure,html,ol,ul,ol#authors,ol#ebooks,ol#authors li p,ol#ebooks li p,p.title {
+margin:0;
+padding:0
 }
 
 h1,h2,summary {
@@ -416,6 +415,14 @@ margin-bottom:2rem;
 margin-top:0
 }
 
+hr,main > article > hr {
+border:none;
+border-top:3px double #777;
+margin:1.5rem 0;
+max-width:100%;
+width:100%
+}
+
 html {
 -ms-text-size-adjust:100%;
 -webkit-text-size-adjust:100%;
@@ -425,59 +432,41 @@ margin:0;
 padding:0
 }
 
+input[type="text"]:focus,input[type="text"]:hover,input[type="search"]:focus,input[type="search"]:hover,select:focus,select:hover {
+background:rgba(0,0,0,.1);
+transition:none
+}
+
 main {
 box-sizing:border-box;
 font-variant-numeric:oldstyle-nums;
-max-width:60rem;
 margin:1rem auto;
+max-width:60rem;
 width:100%
 }
 
 main > article > * {
-margin-right:auto;
 margin-left:auto;
-max-width:40rem;
-}
-
-hr, main > article > hr {
-border:none;
-border-top:3px double #777;
-margin:1.5rem 0;
-max-width:100%;
-width:100%
-}
-
-h1 {
-font-size:2rem;
-letter-spacing:1px;
-margin:1rem auto;
-text-align:center
+margin-right:auto;
+max-width:40rem
 }
 
 main nav {
 margin-bottom:2rem
 }
 
+main nav .current,main nav a[rel],.buttons a,button,form[action="/ebooks"] input[type="text"],form[action="/ebooks"] input[type="search"],form[action="/ebooks"] select {
+transition:border-color .5s,background-color .5s
+}
+
+main nav .current:focus,a.button:focus,input[type="email"]:focus,input[type="text"]:focus,input[type="month"]:focus,input[type="search"]:focus,label.checkbox:focus-within,select:focus,button:focus,nav a[rel]:focus {
+outline:1px dashed
+}
+
 main nav a.current {
 background:#4f9d85;
 border:1px solid rgba(0,0,0,.5);
 color:#fff
-}
-
-button,main nav a:first-child,main nav a:last-child,.buttons a,#download li span:first-child a {
-background-color:#4f9d85;
-border:1px solid #222;
-border-radius:.25rem;
-box-shadow:2px 2px 0 rgba(0,0,0,.5),1px 1px 0 rgba(255,255,255,.5) inset;
-color:#fff;
-display:inline-block;
-font-family:"League Spartan";
-line-height:1.2;
-text-shadow:1px 1px 0 rgba(0,0,0,.5)
-}
-
-button,main nav a:first-child,main nav a:last-child,.buttons a {
-padding:1rem 1.5rem;
 }
 
 main nav a:first-child:before {
@@ -573,149 +562,99 @@ direction:rtl;
 font-family:'KFGQPC Uthman Taha Naskh','Crimson Pro','Times New Roman'
 }
 
-form[action="/ebooks"] {
-  max-width: calc(100% - 2rem);
-  margin: 0 auto 4rem;  
-  overflow: hidden;
+ol#authors > li,ol#ebooks > li {
+display:inline-block;
+margin-bottom:3rem;
+vertical-align:top;
+width:calc(25% - 4px)
 }
 
-form[action="/ebooks"] label {
-  display: block;
-  margin-top: .5rem;  
+ol#authors,ol#ebooks {
+text-align:justify
 }
 
-form[action="/ebooks"] select,
-form[action="/ebooks"] input[type="text"], 
-form[action="/ebooks"] input[type="search"] {
-  width: 100%;
-  padding: 1rem;
-  font: 0.88rem/1.4 "Crimson Pro", sans-serif;
-  border: 1px solid #777;
-  border-radius: .25rem;
-  background: #0000000D;
-  color: #222;
-  appearance: none; 
+ol#ebooks > li img,ol#authors > li img,.more-ebooks img {
+transition:transform .2s ease,box-shadow .2s ease
 }
 
-form[action="/ebooks"] select {
-  padding-right: 2rem; 
-  display:block
+ol#ebooks > li img:hover,ol#authors > li img:hover,.more-ebooks img:hover {
+box-shadow:3px 3px 1px rgba(0,0,0,0.25);
+transform:scale(1.05)
 }
 
-form[action="/ebooks"] label.select::after,
-form[action="/ebooks"] label.search::before {
-  font-family: "Fork Awesome";
-  position: absolute;
-  top: 50%;
-  color: #777;
+ol#ebooks > li p:first-of-type a,.ebook-details p.title {
+font-weight:700
 }
 
-form[action="/ebooks"] label.select::after {
-  right: 1rem;
-  content: "\f107";
-  transition: color .5s;
+picture,form[action="/ebooks"] label.search,form[action="/ebooks"] label.select {
+position:relative
 }
 
-form[action="/ebooks"] label.search::before {
-  left: 1rem; 
-  content: "\f002";
-  text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+picture[data-caption]::before {
+background:rgba(0,0,0,.5);
+border-radius:.25rem;
+bottom:2.5rem;
+color:#fff;
+content:attr(data-caption);
+font-size:.6rem;
+font-style:italic;
+opacity:0;
+padding:.25rem .5rem;
+position:absolute;
+right:.25rem;
+transition:all .25s
 }
 
-form[action="/ebooks"] label.search input {
-  padding-left: 2.5rem; 
+picture[data-caption]:hover::before {
+opacity:1
 }
 
-form[action="/ebooks"] label.search, 
-form[action="/ebooks"] label.select {
-  position: relative;
+select[multiple] option:checked {
+background-image:linear-gradient(0deg,#4f9d85 0%,#4f9d85 100%)
 }
 
-form[action="/ebooks"] label.tags,
-form[action="/ebooks"] label.sort,
-form[action="/ebooks"] label.view,
-form[action="/ebooks"] label.per-page {
-  float: left;
-  margin-right: 1rem;  
+span.subtitle {
+font-weight:200
 }
 
-form[action="/ebooks"] label.tags select {
-  height:8.5rem
+table {
+border-collapse:collapse;
+border-spacing:0
 }
 
+@media (hover: none) and (pointer: coarse) {
 form[action="/ebooks"] label.search {
-  margin-left: 9.5rem;
+clear:both
 }
 
-form[action="/ebooks"] button {
-  margin-top: 1.8rem;
-  font: 700 1rem/1.2 "League Spartan";
+form[action="/ebooks"] select[multiple] {
+height:auto!important
 }
 
 form[action="/ebooks"] select[multiple] option[value="all"] {
-  border-bottom: 1px dashed #777; 
+display:none
+}
 }
 
-main nav .current,
-main nav a[rel],
-.buttons a,
-button,
-form[action="/ebooks"] input[type="text"],
-form[action="/ebooks"] input[type="search"],
-form[action="/ebooks"] select {
-    transition: border-color .5s, background-color .5s;
-}
-
-@media (hover: none) and (pointer: coarse){ 
-
-  form[action="/ebooks"] label.search {
-    clear: both; 
-  }
-
-  /* Unset height for touch devices */
-  form[action="/ebooks"] select[multiple] {
-    height: auto !important;  
-  }
-
-  /* Hide "all" button on touch devices */
-  form[action="/ebooks"] select[multiple] option[value="all"] {
-    display: none;
-  }
-}
 @media (max-width: 900px) {
+article {
+padding:0 2rem
+}
 
-  form[action="/ebooks"] select[multiple] {
-      height: auto !important;
-        }
+footer {
+padding:1rem 3rem
+}
 
+form[action="/ebooks"] select[multiple] {
+height:auto!important
+}
 
 ol#authors > li,ol#ebooks > li {
 margin:2rem .2rem;
 width:31.5%
 }
 
-article {
-padding:0 2rem
-}
-footer {
-padding: 1rem 3rem
-}
-
 @media (max-width: 700px) {
-button,
-form[action="/ebooks"] label.search,
-form[action="/ebooks"] label.tags,
-form[action="/ebooks"] label.sort, 
-form[action="/ebooks"] label.view,
-form[action="/ebooks"] label.per-page {
-  float:left;
-  margin:.5rem 1rem;
-}
-
-ol#authors > li img,ol#ebooks > li img,.ebook-details img {
-margin-bottom:10px
-}
-
 #download li span:nth-child(2) {
 display:none
 }
@@ -751,6 +690,11 @@ height:140px
 height:160px
 }
 
+button,form[action="/ebooks"] label.search,form[action="/ebooks"] label.tags,form[action="/ebooks"] label.sort,form[action="/ebooks"] label.view,form[action="/ebooks"] label.per-page {
+float:left;
+margin:.5rem 1rem
+}
+
 main[dir="ltr"] p.description {
 clear:left
 }
@@ -758,20 +702,13 @@ clear:left
 main[dir="rtl"] p.description {
 clear:right
 }
+
+ol#authors > li img,ol#ebooks > li img,.ebook-details img {
+margin-bottom:10px
+}
 }
 
 @media only screen and (max-width: 540px) {
-ol#authors li,ol#ebooks li {
-margin:0 4px;
-margin-bottom:2rem;
-width:47%
-}
-
-picture[data-caption]::before {
-	right:1rem;
-	left:1rem
-}
-
 .articles ul:first-of-type li {
 font-size:small
 }
@@ -817,15 +754,32 @@ padding:1rem
 main nav span,main nav a:not(:first-child):not(:last-child):not(.current),footer span:nth-of-type(4) {
 display:none
 }
+
+ol#authors li,ol#ebooks li {
+margin:0 4px;
+margin-bottom:2rem;
+width:47%
+}
+
+picture[data-caption]::before {
+left:1rem;
+right:1rem
+}
 }
 
 @media only screen and (max-width: 480px) {
 .ebook-details {
 width:95%
 }
+
 .ebook-details .buttons a {
 margin-right:.25rem
 }
+
+.ebook-details p.author,.ebook-details p.tags,.ebook-details p.description {
+margin:.25rem 0
+}
+
 .more-ebooks li {
 margin:.25rem;
 width:35%
@@ -838,10 +792,6 @@ display:none
 footer span:nth-of-type(4) {
 display:inline
 }
-
-.ebook-details p.author, .ebook-details p.tags, .ebook-details p.description {
-    margin: .25rem 0;
-    }
 }
 
 @media only screen and (max-width: 380px) {
@@ -860,6 +810,10 @@ display:none
 }
 
 @media only screen and (max-width: 320px) {
+footer span:nth-of-type(4) {
+display:none
+}
+
 ol#authors > li img,ol#ebooks > li img {
 height:335px;
 width:224px
@@ -869,8 +823,5 @@ ol#authors > li,ol#ebooks > li {
 margin:1rem 0;
 width:100%
 }
-
-footer span:nth-of-type(4) {
-display:none
 }
 }
