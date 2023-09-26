@@ -585,11 +585,29 @@ main nav a:first-child::before {
   transition: all 200ms ease;
 }
 
+main nav a:last-child:after{
+  content: "\f061";
+  margin-left: .5rem;
+  position: relative;
+  left: 0;
+  transition: all 200ms ease;
+}
+
+
 main nav a:first-child::before,
 main nav a:last-child::after,  
 .buttons a::before {
   font-family: 'Fork Awesome';
 }
+
+main nav a:not(:first-child):not(:last-child) {
+  padding: 1rem;
+  margin: 0 .5rem;
+  border-radius: .25rem;
+  font-variant-numeric: normal;
+  text-decoration: underline;
+}
+
 
 main nav a:first-child[href]:hover::before {
   right: .25rem;
